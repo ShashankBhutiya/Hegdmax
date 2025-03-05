@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Excel to 2D Matrix Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Excel to 2D Matrix Converter</h1>
+    <label for="excelFile">Select an Excel File:</label>
+    <input type="file" id="excelFile" accept=".xls,.xlsx" />
+    <button id="convertBtn">Convert</button>
+
+    <h3>Resulting 2D Matrix (JSON format):</h3>
+    <pre id="output"></pre>
+    <div id="progress-container" style="width: 50%; border: 1px solid #ccc; margin: 20px auto;">
+        <div id="progress-bar" style="width: 0%; height: 20px; background-color: #4CAF50;"></div>
+    </div>
+    <div id="progress-text">0%</div>
+
+    <!-- Canvas for the payoff chart -->
+    <canvas id="payoffChart" width="400" height="200"></canvas>
+
+    <!-- Include XLSX library from CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Include Chart.js library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
